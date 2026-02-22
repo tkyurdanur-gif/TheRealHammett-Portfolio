@@ -1,9 +1,9 @@
 # Professional Portfolio
 
 ## Introduction
-Welcome to my portfolio! I am [Your Name], a passionate [Your Profession or Title] with experience in [Briefly describe your experience or background]. My goal is to [Your Goal or Mission Statement].
+Welcome to my portfolio! I am [TheRealHammett], a passionate [Strategiser and a former Co-owner.] with experience in [SCP Related Factions.]. My goal is to [Lead my team to success.].
 
-## Skills
+## Skillst
 - Skill 1
 - Skill 2
 - Skill 3
