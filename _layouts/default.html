@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: black;
+            overflow: hidden;
+        }
+        .neon-corner {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: transparent;
+            border: 10px solid neonorange;
+        }
+        .neon-top-left {
+            top: 0;
+            left: 0;
+        }
+        .neon-top-right {
+            top: 0;
+            right: 0;
+        }
+        .neon-bottom-left {
+            bottom: 0;
+            left: 0;
+        }
+        .neon-bottom-right {
+            bottom: 0;
+            right: 0;
+        }
+        #particle-canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="particle-canvas"></canvas>
+    <div class="neon-corner neon-top-left"></div>
+    <div class="neon-corner neon-top-right"></div>
+    <div class="neon-corner neon-bottom-left"></div>
+    <div class="neon-corner neon-bottom-right"></div>
+    <script>
+        // Particle animation script
+        var canvas = document.getElementById('particle-canvas');
+        var ctx = canvas.getContext('2d');
+
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+
+        window.addEventListener('resize', resizeCanvas, false);
+        resizeCanvas();
+
+        let particles = [];
+
+        function createParticles() {
+            particles.push({
+                x: Math.random() * canvas.width,
+                y: Math.random() * canvas.height,
+                radius: Math.random() * 5 + 1,
+                color: 'rgba(255, 165, 0, 1)',
+                dx: Math.random() * 2 - 1,
+                dy: Math.random() * 2 - 1,
+            });
+        }
+
+        function animateParticles() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            particles.forEach((p, index) => {
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+                ctx.fillStyle = p.color;
+                ctx.fill();
+                p.x += p.dx;
+                p.y += p.dy;
+
+                if (p.x > canvas.width || p.x < 0 || p.y > canvas.height || p.y < 0) {
+                    particles.splice(index, 1);
+                }
+            });
+            requestAnimationFrame(animateParticles);
+        }
+
+        for (let i = 0; i < 100; i++) {
+            createParticles();
+        }
+        animateParticles();
+    </script>
+</body>
+</html>
