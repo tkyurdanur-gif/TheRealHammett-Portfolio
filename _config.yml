@@ -1,5 +1,29 @@
-# Jekyll Configuration
+# Jekyll configuration for a professional portfolio site
 
-# Basic site settings
-repository: tkyurdanur-gif/TheRealHammett-Portfolio
-# Other configuration options can be defined here
+title: "Your Portfolio Title"
+description: "A brief description of your portfolio"
+author:
+  name: "Your Name"
+  email: "youremail@example.com"
+
+# Set the baseurl if the site is hosted on a subdirectory
+baseurl: "" # e.g. /myportfolio
+
+# Optional: Defaults for Sass/SCSS
+sass:
+  style: compressed
+
+# Optional: Set the theme
+theme: "minimal" # e.g. "jekyll-theme-minimal"
+
+# Optional: Set the pagination settings
+paginate: 5
+paginate_path: "blog/page:num/"
+
+# Optional: Exclude files from the generated site
+exclude:
+  - "README.md"
+  - "Gemfile"
+  - "Gemfile.lock"
+  - "node_modules"
+  - "vendor"
