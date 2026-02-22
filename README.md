@@ -1,7 +1,7 @@
 # Professional Portfolio
 
 ## Introduction
-Welcome to my portfolio! I am [TheRealHammett], a passionate [Strategiser and a former Co-owner.] with experience in [SCP Related Factions.]. My goal is to [Lead my team to success.].
+Welcome to my portfolio! I am TheRealHammett, a passionate Strategiser and a former Co-owner. with experience in SCP Related Factions. My goal is to Lead my team to success.
 
 ## Skillst
 - Skill 1
