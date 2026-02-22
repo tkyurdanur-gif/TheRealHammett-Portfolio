@@ -1,0 +1,54 @@
+.container {
+    background-color: black;
+    border-radius: 15px;
+    border: 5px solid orange;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: orange;
+}
+
+p {
+    color: orange;
+}
+
+.button {
+    background-color: orange;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+}
+
+/* Neon orange styling for corners */
+.corner {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: orange;
+}
+
+.corner.top-left {
+    top: 0;
+    left: 0;
+}
+
+.corner.top-right {
+    top: 0;
+    right: 0;
+}
+
+.corner.bottom-left {
+    bottom: 0;
+    left: 0;
+}
+
+.corner.bottom-right {
+    bottom: 0;
+    right: 0;
+}
